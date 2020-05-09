@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+    <link rel="stylesheet" href="all.css">
+</head>
+<body>
+    <section class="wraper container-fluid d-flex  justify-content-center align-items-center">
+        <div class="todolist">
+            <header class="header d-flex justify-content-center">
+                <a class="active" href="#" data-task="1" >My Task</a>
+                <a class="" href="#" data-task="2">In Progress</a>
+                <a class="" href="#" data-task="3">Completed</a>
+            </header>
+            <div class="content">
+                <div>
+                    <input type="text" class="add_task_btn" placeholder="Add Task" type="text" >
+                </div>
+                <div class="new_todo_block d-none  align-items-center flex-column">
+                    <div id="add_header" class="add_header d-flex justify-content-between">
+                        <div class="d-flex my-2">
+                            <div data-complete="0" class="done uncomplete align-self-center"></div>
+                            <div data-complete="1" class="done complete align-self-center d-none">
+                                <i class="fas fa-check"></i>
+                            </div>
+                            <input class="add_input" type="text" placeholder="Type Something Here...">
+                        </div>
+                        <div class="my-2 d-flex align-items-center ">
+                            <a class="star" href="#" data-star='0'>
+                                <i class="far fa-star header_btn"></i>
+                            </a>
+                            <a class="star d-none" href="#" data-star='1'>
+                                <i class="fas fa-star header_btn "></i>
+                            </a>
+                            <a href="#">
+                                <i class="fas fa-edit header_btn"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="add_content">
+                        <div class="d-flex pt-3">
+                            <div>
+                                <i class="far fa-calendar-alt"></i>
+                            </div>
+                            <div>
+                                <span class="">Deadline</span>
+                                <div id="Deadline_content" class="d-flex">
+                                    <input type="date" placeholder="yyyy/mm/dd">
+                                    <input class="ml-2" type="time" placeholder="hh:mm">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="d-flex pt-3">
+                            <div>
+                                <i class="far fa-file"></i>
+                            </div>
+                            <div class="d-flex flex-column">
+                                <span>File</span>
+                                <div  class="d-flex">
+                                    <div class="file_text">
+                                        <span>2020/03/20.jpg</span>
+                                        <div>uploaded yesterday</div>
+                                    </div>
+                                    <div class="upload_btn ml-2 align-self-center">
+                                        
+                                        <a href="#" ><i class="fas fa-plus"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="d-flex pt-3">
+                            <div> 
+                                <i class="far fa-comment-dots"></i>
+                            </div>
+                            <div id="Comment_content" class="d-flex flex-column">
+                                <span>Comment</span>
+                                <textarea placeholder="Type your memo here" name="" id="" cols="50" rows="5"></textarea>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="add_footer d-flex mt-3">
+                        <a href="#"><i class="fas fa-times"></i> Cancel</a>
+                        <a href="#"><i class="fas fa-plus"></i>Add Task</a>
+                    </div>
+                </div>
+                <ul class="list_block">
+                </ul>
+            </div>
+        </div>
+    </section>
+</body>
+<script src="jquery-3.4.1.min.js"></script>
+<script src="all.js"></script>
+
+</html>
